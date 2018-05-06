@@ -15,11 +15,12 @@ OS : Arch Linux (but you can install in other linux)
 		sudo apt install i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt  
 
 #how to install
-2. clone from repo
+
+1. clone from repo
 
 		git clone https://github.com/wahyuhadi/i3-WM.git
 
-3. copy to config and rename with i3
+2. copy to config and rename with i3
 
 		cp -rf i3-WM  ~/.config/i3
 		
