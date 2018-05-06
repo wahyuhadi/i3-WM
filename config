@@ -272,30 +272,7 @@ bar {
     }
 }
 
-# secondary bar
-# bar {
-# # i3bar, modularized lua json configuration 
-#     status_command ~/.config/i3/conky/04.modular/json.top.sh
 
-#     height         25    
-#     id             top-bar
-#     i3bar_command  i3bar -t
-#     position       top
-#     workspace_buttons      no   
-    
-#     colors {
-#         background #ffffff
-#         statusline #5c5dad
-#         separator  #000000
-              
-#         # class            border    backgrd   text
-#         focused_workspace  #cccccc   #c9c925   #000000
-#         active_workspace   #cccccc   #aaaaaa   #000000
-#         inactive_workspace #cccccc   #ffffff   #5c5dad
-#         urgent_workspace   #cccccc   #ad3737   #ffffff
-#     }
-
-# }
 
 exec --no-startup-id ccccc -solid "#333333"
 exec --no-startup-id compton
@@ -303,12 +280,3 @@ exec --no-startup-id nitrogen --set-zoom ~/.config/i3/wallpaper/wahyu.jpg
 exec --no-startup-id nm-applet 
 exec --no-startup-id dunst
 exec --no-startup-id parcellite
-
-#exec --no-startup-id mate-terminal
-
-#exec --no-startup-id "sh -c 'sleep 10; exec geany'"
-#exec --no-startup-id "sh -c 'sleep 15; exec thunar'"
-# exec --no-startup-id "sh -c 'sleep 10; exec geany'"
-# exec --no-startup-id "sh -c 'sleep 15; exec thunar'"
-
-# vim:filetype=i3
