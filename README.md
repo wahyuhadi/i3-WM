@@ -7,12 +7,12 @@ OS : Arch Linux (but you can install in other linux)
 
 1. Arch Linux Distribution
 	
-		sudo pacman -S i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt  
+		sudo pacman -S i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt conky  
 
 
 2. Debian Distibution
 
-		sudo apt install i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt  
+		sudo apt install i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt conky
 
 #how to install
 
