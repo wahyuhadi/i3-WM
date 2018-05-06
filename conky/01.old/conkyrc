@@ -1,0 +1,8 @@
+out_to_x no
+out_to_console yes
+update_interval 1
+
+TEXT
+${if_mpd_playing}♫  ${mpd_artist} -  ${mpd_title} | ${endif}\
+${time %H:%M:%S}    
+
