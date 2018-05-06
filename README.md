@@ -3,18 +3,22 @@ OS : Arch Linux (but you can install in other linux)
 
 ![](https://github.com/wahyuhadi/i3-WM/blob/master/image/Screenshot%20at%202018-05-06%2022-46-15.png) 
 
-#Install Dependency
+
+thanks to dotfiles Indonesia
+[](https://github.com/epsi-rns/dotfiles) 
+ 
+#	Install Dependency
 
 1. Arch Linux Distribution
 	
-		sudo pacman -S i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt conky  
+		sudo pacman -S i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt  
 
 
 2. Debian Distibution
 
-		sudo apt install i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt conky
+		sudo apt install i3-gaps caja nm-applet i3blocks  i3-gaps  i3lock i3status urxvt  
 
-#how to install
+# how to install
 
 1. clone from repo
 
@@ -24,6 +28,6 @@ OS : Arch Linux (but you can install in other linux)
 
 		cp -rf i3-WM  ~/.config/i3
 		
-#Other
+#	Other
 
 		see config file to modif this i3
