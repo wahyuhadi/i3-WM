@@ -24,27 +24,26 @@ bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
-
+bindsym $mod+$alt+s exec mate-screenshot
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+$alt+d exec nautilus
 bindsym $mod+$alt+f exec rofi -show run -opacity 90
 
 # list open windows to switch to
 bindsym $mod+Tab exec rofi -show window -opacity 90
 
-
 # change focus
-bindsym $mod+j focus left
+bindsym $mod+j focus left  resize shrink width 27 px or 27 ppt
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+semicolon focus right  resize grow width 27 px or 27 ppt
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
+bindsym $mod+Left focus left   resize grow width 27 px or 27 ppt
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Right focus right  resize shrink width 27 px or 27 ppt
 
 # move focused window
 bindsym $mod+$shift+j move left
@@ -180,23 +179,28 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 
+
+
+
+
 # Window Colours
 # class                 border   backgr.  text     indicator
-client.unfocused        #00910e  #5c5dad  #00910e  #fcc09e
+client.unfocused         #00910e  #5c5dad  #00910e  #fcc09e
 client.focused_inactive #222222  #222222  #999999  #fcc09e
-client.focused          #c9c925  #c9c925  #000000  #fcc09e
+client.focused #c9c925  #c9c925  #000000  #fcc09e
 client.urgent           #a5a5a5  #a5a5a5  #2e3436  #fcc09e
 client.background       #00910e
+
 
 # workspace_layout tabbed
 
 # i3 gaps
-#for_window [class="^.*"] border pixel 3
-new_window pixel 3
+for_window [class="^.*"] border pixel 2
+# new_window pixel 2
 
 # Gaps
-gaps inner 20
-gaps outer 5
+gaps inner 0
+gaps outer 0
 smart_gaps on
 smart_borders on
 
@@ -274,7 +278,19 @@ bar {
 
 exec --no-startup-id ccccc -solid "#333333"
 exec --no-startup-id compton
-exec --no-startup-id nitrogen --set-zoom ~/.config/i3/wallpaper/wahyu.jpg
-exec --no-startup-id nm-applet 
+exec --no-startup-id nitrogen --set-zoom ~/.config/i3/wallpaper/panda.jpg
+exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id parcellite
+
+
+set $sysmenu "system:  [P]oweroff  re[B]oot  [L]ock  logou[T] "
+bindsym $mod+Shift+Return      mode $sysmenu
+mode $sysmenu {
+    bindsym p         exec shutdown -P now
+    bindsym b         exec shutdown -r now
+    bindsym l         exec sh ~/.i3/i3lock.sh, mode "default"
+    bindsym t         exec --no-startup-id i3-msg exit, mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
